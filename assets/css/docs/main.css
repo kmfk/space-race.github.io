@@ -79,6 +79,11 @@ pre {
     font-size: 13px;
 }
 
+.sidebar-nav li a span.octicon {
+    text-indent: 0;
+    padding-right: 5px;
+}
+
 #sidebar-wrapper ul li a:hover {
     background: rgba(255,255,255,0.1);
     color: white;
