@@ -48,7 +48,9 @@ gulp.task('build', ['clean'], function() {
         // Wrap file in template
         .pipe(wrap(
             { src: 'src-docs/templates/standard-doc.html' },
-            { siteTitle: 'Mission Control', example: 'wow'},
+            {
+                siteTitle: 'Mission Control'
+            },
             { engine: 'hogan' }
         ))
 

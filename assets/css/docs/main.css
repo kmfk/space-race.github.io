@@ -1,0 +1,24 @@
+body {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: bold;
+}
+
+#sidebar-wrapper {
+    background: #3D334E;
+}
+
+#sidebar-wrapper .logo {
+    display: block;
+    padding: 20px;
+}
+
+#sidebar-wrapper ul li a {
+    color: #BAB0CB;
+}
+
+.sidebar-nav {
+    top: 84px;
+}
