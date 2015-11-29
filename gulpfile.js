@@ -48,7 +48,8 @@ gulp.task('build', ['clean'], function() {
 
         // Run through gulp-ssg
         .pipe(ssg({
-            sort: 'sort'
+            baseUrl: '/mission-control/docs',
+            sort: 'order'
         }))
 
         // Wrap file in template

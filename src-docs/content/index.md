@@ -17,6 +17,16 @@ Mission Control is a tool for orchestrating devops automation. It's like a prett
 
 ---
 
+## Use Cases
+
+**Continuous Integration (CI)** &mdash; Mission Control is a good replacement for tools like Jenkins or Travis, especially if you want more flexibility.
+
+**Continuous Deployment (CD)** &mdash; Mission Control was designed with continuous deployment in mind. Beyond tools for task automation, Mission Control also includes tooling for aggregating monitoring. This is the heart of mission control, making you feel in control of your deployment process from end to end.
+
+**Other** &mdash While CI and CD are more or less the focus of Mission Control, it can be used almost anywhere there is a need for task automation.
+
+---
+
 ## Project Sponsors
 
 In addition to community support, Mission Control is sponsored by [Zesty.io](https://zesty.io/).

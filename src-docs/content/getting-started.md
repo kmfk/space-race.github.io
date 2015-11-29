@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-sort: 1
+order: 1
 ---
 
 # Getting Started

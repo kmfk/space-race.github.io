@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+
     <title>Overview | Mission Control</title>
 
     <!-- Bootstrap: See http://getbootstrap.com/css/ -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" integrity="sha384-pdapHxIh7EYuwy6K7iE41uXVxGCXY0sAjBzaElYGJUrzwodck3Lx6IE2lA0rFREo" crossorigin="anonymous">
 
     <!-- Simple Sidebar plugin -->
-    <link href="../../assets/css/docs/simple-sidebar.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/docs/simple-sidebar.css" rel="stylesheet" type="text/css" />
 
     <!-- Primary Styles -->
-    <link href="../../assets/css/docs/main.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/docs/main.css" rel="stylesheet" type="text/css" />
 
     <!-- Lato Font -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,700,400,400italic" rel="stylesheet" type="text/css">
@@ -43,13 +45,15 @@
             <li class="divider"></li>
             <li class="title">Documentation</li>
             <li><a href="/mission-control/docs/">Overview</a></li>
-            <li><a href="./getting-started.html">Getting Started</a></li>
+            <li><a href="/mission-control/docs/getting-started.html">Getting Started</a></li>
             <li class="divider"></li>
             <li class="title">Contributing & Development</li>
-            <li><a href="./development-overview.html">Development Overview</a></li>
+            <li><a href="/mission-control/docs/development-overview.html">Development Overview</a></li>
+            <li><a href="/mission-control/docs/architecture.html">Architecture</a></li>
+            <li><a href="/mission-control/docs/extensions.html">Building an Extension</a></li>
             <li class="divider"></li>
             <li class="title">Additional Resources</li>
-            <li><a href="https://github.com/space-race/mission-control" target="_blank">Mission Control on GitHub</a></li>
+            <li><a href="https://github.com/space-race/mission-control" target="_blank"><span class="octicon octicon-mark-github"></span>Mission Control on GitHub</a></li>
         </ul>
     </div>
 
@@ -64,6 +68,11 @@
 <p><strong>WARNING: Mission Control is a work in progress.</strong></p>
 <hr>
 <p>Mission Control is a tool for orchestrating devops automation. It&#39;s like a prettier, friendlier Jenkins.</p>
+<hr>
+<h2 id="use-cases">Use Cases</h2>
+<p><strong>Continuous Integration (CI)</strong> &mdash; Mission Control is a good replacement for tools like Jenkins or Travis, especially if you want more flexibility.</p>
+<p><strong>Continuous Deployment (CD)</strong> &mdash; Mission Control was designed with continuous deployment in mind. Beyond tools for task automation, Mission Control also includes tooling for aggregating monitoring. This is the heart of mission control, making you feel in control of your deployment process from end to end.</p>
+<p><strong>Other</strong> &amp;mdash While CI and CD are more or less the focus of Mission Control, it can be used almost anywhere there is a need for task automation.</p>
 <hr>
 <h2 id="project-sponsors">Project Sponsors</h2>
 <p>In addition to community support, Mission Control is sponsored by <a href="https://zesty.io/">Zesty.io</a>.</p>
