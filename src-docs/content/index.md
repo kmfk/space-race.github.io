@@ -6,3 +6,8 @@
 ---
 
 **WARNING: Mission Control is a work in progress.**
+
+---
+
+Mission Control is a tool for orchestrating devops automation. It's like a prettier, friendlier Jenkins.
+
