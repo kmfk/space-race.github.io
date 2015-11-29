@@ -6,6 +6,7 @@ title: Overview
 
 [![Build Status](https://travis-ci.org/space-race/mission-control.svg)](https://travis-ci.org/space-race/mission-control)
 [![Dependency Status](https://david-dm.org/space-race/mission-control.svg)](https://david-dm.org/space-race/mission-control)
+[![Dev Dependency Status](https://david-dm.org/space-race/mission-control/dev-status.svg)](https://david-dm.org/space-race/mission-control#info=devDependencies)
 
 ---
 
