@@ -47,7 +47,9 @@ gulp.task('build', ['clean'], function() {
         .pipe(rename({ extname: '.html' }))
 
         // Run through gulp-ssg
-        .pipe(ssg())
+        .pipe(ssg({
+            sort: 'sort'
+        }))
 
         // Wrap file in template
         .pipe(wrap(
@@ -63,6 +65,6 @@ gulp.task('build', ['clean'], function() {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('src-docs/content/**/*.md', ['build'])
+    gulp.watch('src-docs/**/*', ['build'])
 });
 gulp.task('default', ['build']);

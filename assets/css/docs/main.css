@@ -52,6 +52,39 @@ pre {
     top: 100px;
 }
 
+.sidebar-nav li {
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.sidebar-nav li.divider {
+    line-height: 40px;
+    height: 1px;
+    margin: 9px 19px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    background-color: #675882;
+}
+
+.sidebar-nav li.title {
+    line-height: 30px;
+    color: white;
+    /*color: #DED8E8;*/
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.sidebar-nav li a {
+    /*font-size: 15px;*/
+    font-size: 13px;
+}
+
+#sidebar-wrapper ul li a:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+
 #page-content-wrapper {
     max-width: 760px;
 }

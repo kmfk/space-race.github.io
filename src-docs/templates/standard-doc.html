@@ -40,10 +40,24 @@
             <img src="/assets/images/logo.svg" />
         </a>
         <ul class="sidebar-nav">
+            <li class="divider"></li>
+            <li class="title">Documentation</li>
             <li><a href="/mission-control/docs/">Overview</a></li>
             {{#file.data.root.data.children}}
+            {{^data.dev}}
             <li><a href=".{{data.url}}">{{data.title}}</a></li>
+            {{/data.dev}}
             {{/file.data.root.data.children}}
+            <li class="divider"></li>
+            <li class="title">Contributing & Development</li>
+            {{#file.data.root.data.children}}
+            {{#data.dev}}
+            <li><a href=".{{data.url}}">{{data.title}}</a></li>
+            {{/data.dev}}
+            {{/file.data.root.data.children}}
+            <li class="divider"></li>
+            <li class="title">Additional Resources</li>
+            <li><a href="https://github.com/space-race/mission-control" target="_blank">Mission Control on GitHub</a></li>
         </ul>
     </div>
 
@@ -65,6 +79,7 @@
     <!-- /#page-content-wrapper -->
 
 </div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript" integrity="sha384-6ePHh72Rl3hKio4HiJ841psfsRJveeS+aLoaEf3BWfS+gTF0XdAqku2ka8VddikM" crossorigin="anonymous" integrity="sha384-pPttEvTHTuUJ9L2kCoMnNqCRcaMPMVMsWVO+RLaaaYDmfSP5//dP6eKRusbPcqhZ" crossorigin="anonymous"></script>
 
