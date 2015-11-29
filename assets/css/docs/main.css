@@ -1,9 +1,38 @@
 body {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    color: #4B405D;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: bold;
+}
+
+p {
+    font-size: 17px;
+    color: #66587D;
+}
+
+hr {
+    border-top: 1px solid #E0DCE6;
+}
+
+ol, ul {
+    padding-left: 20px;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+h1+h2 {
+    margin-top: 20px;
+}
+
+pre {
+    border: none;
+    background-color: #3D334E;
+    color: #D1C6E0;
 }
 
 #sidebar-wrapper {
@@ -20,5 +49,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .sidebar-nav {
-    top: 84px;
+    top: 100px;
+}
+
+#page-content-wrapper {
+    max-width: 760px;
+}
+
+#page-content-wrapper ul {
+    margin-bottom: 12px;
+}
+
+#page-content-wrapper ul li {
+    margin-top: 4px;
 }
