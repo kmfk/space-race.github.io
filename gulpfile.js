@@ -19,6 +19,8 @@ var matter = require('gray-matter');
 var markdown = require('gulp-markdown');
 var wrap = require('gulp-wrap');
 var del = require('del');
+var plumber = require('gulp-plumber');
+
 
 
 gulp.task('clean', function(cb) {
@@ -28,6 +30,8 @@ gulp.task('clean', function(cb) {
 gulp.task('build', ['clean'], function() {
 
     return gulp.src('src-docs/content/**/*.md')
+
+        .pipe(plumber())
 
         // Extract YAML front-matter using gulp-data
         .pipe(data(function(file) {
@@ -58,4 +62,7 @@ gulp.task('build', ['clean'], function() {
         .pipe(gulp.dest('mission-control/docs/'));
 });
 
+gulp.task('watch', function () {
+    gulp.watch('src-docs/content/**/*.md', ['build'])
+});
 gulp.task('default', ['build']);
