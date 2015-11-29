@@ -8,6 +8,19 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: bold;
 }
 
+h3 {
+    color: #66587D; /* matches body copy to make it more subtle and make h2's and h1's pop out a bit more */
+    /* alternative: #76678C */
+}
+
+a {
+    color: #00A7DE;
+}
+
+a:hover {
+    color: #4B405D;
+}
+
 p {
     font-size: 17px;
     color: #66587D;
