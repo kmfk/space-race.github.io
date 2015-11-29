@@ -2,8 +2,14 @@
 
 ## Contributing to Docs
 
-After making any changes, run the build command:
+To build docs, run
 
 ```
-./node_modules/.bin/gulp
+npm run build
+```
+
+To watch for changes, build automatically, and server on `http://localhost:8080`, run
+
+```
+npm run dev
 ```

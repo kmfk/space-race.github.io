@@ -20,7 +20,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "./node_modules/.bin/gulp watch & node server.js"
+    "dev": "./node_modules/.bin/gulp watch & node server.js",
+    "build": "./node_modules/.bin/gulp build"
   },
   "repository": {
     "type": "git",
