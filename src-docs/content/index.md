@@ -9,13 +9,14 @@ title: Overview
 
 ---
 
-**WARNING: Mission Control is a work in progress.**
+<div class="alert alert-danger">Note: Mission Control is not recommended for use in production yet.</div>
 
 ---
 
 Mission Control is a tool for orchestrating devops automation. It's like a prettier, friendlier Jenkins.
 
----
+
+
 
 ## Use Cases
 
@@ -23,9 +24,10 @@ Mission Control is a tool for orchestrating devops automation. It's like a prett
 
 **Continuous Deployment (CD)** &mdash; Mission Control was designed with continuous deployment in mind. Beyond tools for task automation, Mission Control also includes tooling for aggregating monitoring. This is the heart of mission control, making you feel in control of your deployment process from end to end.
 
-**Other** &mdash While CI and CD are more or less the focus of Mission Control, it can be used almost anywhere there is a need for task automation.
+**Other** &mdash; While CI and CD are more or less the focus of Mission Control, it is useful for a number of situations where you might want to manage a number of automated workflows.
 
----
+
+
 
 ## Project Sponsors
 
