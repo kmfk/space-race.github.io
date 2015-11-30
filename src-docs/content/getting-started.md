@@ -38,9 +38,8 @@ Setup is easy.
     ./mc setup
     ```
 
-## Deployment
+4. Run the app 
 
-To get the app started in a local development environment run these 2 commands.
-
-    npm install
+    ```
     npm start
+    ```
