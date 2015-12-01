@@ -70,7 +70,7 @@
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li>Node.js<ul>
-<li>v5.0+ recommended</li>
+<li>v5.0+ required</li>
 </ul>
 </li>
 <li>Redis Server<ul>
@@ -85,7 +85,6 @@
 </li>
 </ul>
 <h2 id="installation">Installation</h2>
-<p>Setup is easy.</p>
 <ol>
 <li><p>Clone the repository</p>
 <pre><code> git clone git@github.com:space-race/mission-control.git
@@ -96,10 +95,23 @@
 <li><p>Run the setup assistant</p>
 <pre><code> ./mc setup
 </code></pre></li>
-<li><p>Run the app </p>
+<li><p>Run the app</p>
 <pre><code> npm start
 </code></pre></li>
 </ol>
+<h2 id="starting-mission-control">Starting Mission Control</h2>
+<p>There are three main ways to start the web and worker nodes of Mission Control.</p>
+<h3 id="self-hosted-server">Self Hosted Server</h3>
+<p>When you are running Mission Control on a self hosted server the easist way to start the application is via <a href="http://pm2.keymetrics.io/">PM2</a> and supply the provided <code>processes.json</code> file.</p>
+<pre><code>  $./node_modules/.bin/pm2 start processes.json
+</code></pre><p>Notice we are using the local <code>PM2</code> package which was installed from npm. The <code>processes.json</code> file is a pm2 configuration which specifices your web and worker nodes to start.</p>
+<h3 id="procfile-based-services">Procfile Based Services</h3>
+<p>Additionally there is a <code>Procfile</code> provided which specifices web and worker nodes to start. When using the <code>npm start</code> command ultimately what happens is <a href="https://github.com/strongloop/node-foreman">node-foreman</a> runs the Procfile starting the processes.</p>
+<p><a href="https://heroku.com">Heroku</a> for instances can be deployed to by pushing your checkout to heroku master, <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app">documented here</a>.</p>
+<p>Or simply click this button!
+<a href="https://heroku.com/deploy?template=https://github.com/space-race/mission-control"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+<h3 id="running-development">Running Development</h3>
+<p>If you plan on contributing to Mission Control you can run a local development environment by using the <code>npm run dev</code> command. This starts a build watch process and runs a node server via <a href="https://github.com/remy/nodemon">nodemon</a>.</p>
 
             <!--<div class="row">-->
                 <!--<div class="col-lg-12">-->
