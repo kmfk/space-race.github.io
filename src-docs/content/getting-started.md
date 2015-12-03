@@ -21,7 +21,7 @@ order: 1
 1. Clone the repository
 
     ```
-    git clone git@github.com:space-race/mission-control.git
+    git clone -b stable git@github.com:space-race/mission-control.git
     ```
 
 2. Install the dependencies
