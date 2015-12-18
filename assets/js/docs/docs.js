@@ -31,10 +31,7 @@ $(function() {
                     $milestoneDiv.append(
                       $('<h3></h3>')
                         .append(
-                          $('<a></a>')
-                            .text(ms.title)
-                            .attr('href', ms.html_url)
-                            .attr('target', '_blank')
+                          $('<a target="_blank"></a>').text(ms.title).attr('href', ms.html_url)
                         )
                     );
                     $milestoneDiv.append($milestoneProgressBar);
@@ -44,7 +41,7 @@ $(function() {
                         if (issue.milestone !== null && issue.milestone.number === ms.number) {
                             $issueList.append(
                               $('<li></li>').append(
-                                $('<a></a>').text(issue.title).attr('href', issue.html_url).attr('target','_blank')
+                                $('<a target="_blank"></a>').text(issue.title).attr('href', issue.html_url)
                               )
                             );
                         }
