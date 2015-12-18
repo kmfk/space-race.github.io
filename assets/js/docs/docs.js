@@ -16,7 +16,14 @@ $(function() {
 
         $.getJSON('https://api.github.com/repos/' + repo + '/milestones', function(milestones) {
             milestones.forEach(function(ms) {
+                var percentageComplete = Math.round(ms.closed_issues / (ms.closed_issues + ms.open_issues)*100);
                 var $milestoneDiv = $('<div class="milestone"></div>');
+                var $milestoneProgressBar = $(
+                  '<div class="progress">' +
+                  '<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="'+ percentageComplete +'" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">' +
+                  percentageComplete + '%' +
+                  '</div>' +
+                  '</div>');
                 var $issueList = $('<ul></ul>');
                 $milestoneDiv.append(
                   $('<h3></h3>')
@@ -27,6 +34,7 @@ $(function() {
                         .attr('target', '_blank')
                     )
                 );
+                $milestoneDiv.append($milestoneProgressBar);
                 $milestoneDiv.append($('<p></p>').text(ms.description));
                 $milestoneDiv.append($issueList);
                 $.getJSON('https://api.github.com/repos/' + repo + '/issues?state=open&milestone=' + ms.number, function(issues) {
