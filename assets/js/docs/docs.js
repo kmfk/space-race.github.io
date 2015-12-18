@@ -17,11 +17,12 @@ $(function() {
         $.getJSON('https://api.github.com/repos/' + repo + '/milestones', function(milestones) {
             milestones.forEach(function(ms) {
                 var percentageComplete = Math.round(ms.closed_issues / (ms.closed_issues + ms.open_issues)*100);
+                var percentageToDisplay = (percentageComplete >= 8) ? percentageComplete : 8;
                 var $milestoneDiv = $('<div class="milestone"></div>');
                 var $milestoneProgressBar = $(
                   '<div class="progress">' +
-                  '<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="'+ percentageComplete +'" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">' +
-                  percentageComplete + '%' +
+                  '<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="'+ percentageComplete +'" aria-valuemin="0" aria-valuemax="100" style="width: ' + percentageToDisplay + '%;">' +
+                  ms.closed_issues + ' / ' + (ms.closed_issues + ms.open_issues) +
                   '</div>' +
                   '</div>');
                 var $issueList = $('<ul></ul>');
