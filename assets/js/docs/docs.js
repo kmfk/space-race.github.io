@@ -23,7 +23,11 @@ $(function() {
                 $milestoneDiv.append($issueList);
                 $.getJSON('https://api.github.com/repos/' + repo + '/issues?state=open&milestone=' + ms.number, function(issues) {
                     issues.forEach(function(issue) {
-                        $issueList.append($('<li></li>').text(issue.title));
+                        $issueList.append(
+                          $('<li></li>').append(
+                            $('<a></a>').text(issue.title).attr('href', issue.html_url).attr('target','_blank')
+                          )
+                        );
                     });
                 });
                 $container.append($milestoneDiv);
