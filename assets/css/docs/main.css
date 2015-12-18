@@ -115,3 +115,8 @@ pre {
 #page-content-wrapper ul li {
     margin-top: 4px;
 }
+
+[data-milestones-repo] .milestone {
+    border-top: solid 1px #e0e0e0;
+    padding-bottom: 10px;
+}
