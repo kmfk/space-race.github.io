@@ -67,7 +67,37 @@
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle"><span class="octicon octicon-three-bars"></span> Menu</a>
-            
+            <h1 id="development-overview">Development Overview</h1>
+<p>To get started developing, follow the steps below.</p>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li>Node 5+</li>
+<li>MySQL 5.6+</li>
+<li>Redis</li>
+</ul>
+<h2 id="setup">Setup</h2>
+<ol>
+<li><p>Clone the <code>mission-control</code> repo.</p>
+<pre><code> git clone https://github.com/space-race/mission-control.git
+</code></pre></li>
+<li><p>Clone the <code>mc-core</code> repo</p>
+<pre><code> git clone https://github.com/space-race/mc-core.git
+</code></pre></li>
+<li><p>Run <code>npm link</code> inside of the <code>mc-core</code> clone</p>
+<pre><code> cd mc-core
+ npm link
+</code></pre></li>
+<li><p>Run <code>npm link mc-core</code> inside of the <code>mc-core</code> (Example <code>cd ~/projects/mission-control &amp;&amp; npm link mc-core</code>)</p>
+<pre><code> cd ../mission-control
+ npm link mc-core
+</code></pre></li>
+<li><p>Run starting command</p>
+<pre><code> mc start --dev
+</code></pre></li>
+<li><p>View the application: Go to <a href="http://localhost:3000">localhost:3000</a></p>
+</li>
+</ol>
+
             <!--<div class="row">-->
                 <!--<div class="col-lg-12">-->
                     <!--<h1>Simple Sidebar</h1>-->
