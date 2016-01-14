@@ -65,3 +65,9 @@ To get started developing, follow the steps below.
     ```
     
 10. View the application: Go to [localhost:3000](http://localhost:3000)
+
+11. Watch the logs by using pm2 logs command
+
+```
+./node_modules/mc-core/node_modules/.bin/pm2 logs
+```
