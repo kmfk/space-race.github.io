@@ -77,19 +77,29 @@
 </ul>
 <h2 id="setup">Setup</h2>
 <ol>
-<li><p>Clone the <code>mission-control</code> repo.</p>
+<li><p>Create a Mission Control project by cloning the <code>mission-control</code> repo.</p>
 <pre><code> git clone https://github.com/space-race/mission-control.git
 </code></pre></li>
-<li><p>Clone the <code>mc-core</code> repo</p>
-<pre><code> git clone https://github.com/space-race/mc-core.git
+<li><p>Clone your fork of the <code>mc-core</code> repo</p>
+<pre><code> git clone https://github.com/your-fork/mc-core.git
 </code></pre></li>
-<li><p>Run <code>npm link</code> inside of the <code>mc-core</code> clone</p>
+<li><p>Run <code>npm link</code> inside of your forked <code>mc-core</code> directory</p>
 <pre><code> cd mc-core
  npm link
 </code></pre></li>
-<li><p>Run <code>npm link mc-core</code> inside of the <code>mc-core</code> (Example <code>cd ~/projects/mission-control &amp;&amp; npm link mc-core</code>)</p>
+<li><p>Link your forked core project in your mission control project</p>
 <pre><code> cd ../mission-control
  npm link mc-core
+</code></pre></li>
+<li><p>Copy the <code>.env.example</code> to <code>.env</code></p>
+<pre><code> cp .env.example .env
+</code></pre></li>
+<li><p>Edit <code>.env</code> and modify Redis and MySQL credentials if necessary</p>
+</li>
+<li><p>Create a <code>mission_control</code> database on your MySQL host</p>
+</li>
+<li><p>Run setup</p>
+<pre><code> mc setup
 </code></pre></li>
 <li><p>Run starting command</p>
 <pre><code> mc start --dev

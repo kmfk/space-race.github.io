@@ -16,36 +16,52 @@ To get started developing, follow the steps below.
 
 ## Setup
 
-1. Clone the `mission-control` repo.
+1. Create a Mission Control project by cloning the `mission-control` repo.
 
     ```
     git clone https://github.com/space-race/mission-control.git
     ```
 
-2. Clone the `mc-core` repo
+2. Clone your fork of the `mc-core` repo
 
     ```
-    git clone https://github.com/space-race/mc-core.git
+    git clone https://github.com/your-fork/mc-core.git
     ```
 
-3. Run `npm link` inside of the `mc-core` clone
+3. Run `npm link` inside of your forked `mc-core` directory
 
     ```
     cd mc-core
     npm link
     ```
 
-4. Run `npm link mc-core` inside of the `mc-core` (Example `cd ~/projects/mission-control && npm link mc-core`)
+4. Link your forked core project in your mission control project
 
     ```
     cd ../mission-control
     npm link mc-core
     ```
+    
+5. Copy the `.env.example` to `.env`
 
-5. Run starting command
+    ```
+    cp .env.example .env
+    ```
+    
+6. Edit `.env` and modify Redis and MySQL credentials if necessary
+
+7. Create a `mission_control` database on your MySQL host
+
+8. Run setup
+
+    ```
+    mc setup
+    ```
+
+9. Run starting command
 
     ```
     mc start --dev
     ```
     
-6. View the application: Go to [localhost:3000](http://localhost:3000)
+10. View the application: Go to [localhost:3000](http://localhost:3000)
