@@ -45,16 +45,18 @@
             <li class="divider"></li>
             <li class="title">Documentation</li>
             <li><a href="/mission-control/docs/">Overview</a></li>
-            <li><a href="/mission-control/docs/getting-started.html">Getting Started</a></li>
+            <li><a href="/mission-control/docs/installation-and-setup.html">Installation &amp; Setup</a></li>
             <li><a href="/mission-control/docs/use-cases.html">Use Cases</a></li>
-            <li><a href="/mission-control/docs/concepts.html">Concepts in Mission Control</a></li>
             <li><a href="/mission-control/docs/comparison.html">Comparison to Other DevOps Tools</a></li>
+            <li><a href="/mission-control/docs/faq.html">FAQ</a></li>
+            <li><a href="/mission-control/docs/updating-mission-control.html">Updating Mission Control</a></li>
+            <li><a href="/mission-control/docs/concepts.html">Concepts in Mission Control</a></li>
             <li><a href="/mission-control/docs/configuring-job-notifications.html">Configuring Job Notifications</a></li>
             <li class="divider"></li>
             <li class="title">Contributing & Development</li>
             <li><a href="/mission-control/docs/development-overview.html">Development Overview</a></li>
+            <li><a href="/mission-control/docs/development-environment-setup.html">Dev Environment Setup</a></li>
             <li><a href="/mission-control/docs/milestones.html">Milestones</a></li>
-            <li><a href="/mission-control/docs/architecture.html">Architecture</a></li>
             <li><a href="/mission-control/docs/extensions.html">Building an Extension</a></li>
             <li class="divider"></li>
             <li class="title">Additional Resources</li>
@@ -68,49 +70,13 @@
         <div class="container-fluid">
             <a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle"><span class="octicon octicon-three-bars"></span> Menu</a>
             <h1 id="development-overview">Development Overview</h1>
-<p>To get started developing, follow the steps below.</p>
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-<li>Node 5+</li>
-<li>MySQL 5.6+</li>
-<li>Redis</li>
-</ul>
-<h2 id="setup">Setup</h2>
-<ol>
-<li><p>Create a Mission Control project by cloning the <code>mission-control</code> repo.</p>
-<pre><code> git clone https://github.com/space-race/mission-control.git
-</code></pre></li>
-<li><p>Clone your fork of the <code>mc-core</code> repo</p>
-<pre><code> git clone https://github.com/your-fork/mc-core.git
-</code></pre></li>
-<li><p>Run <code>npm link</code> inside of your forked <code>mc-core</code> directory</p>
-<pre><code> cd mc-core
- npm link
-</code></pre></li>
-<li><p>Link your forked core project in your mission control project</p>
-<pre><code> cd ../mission-control
- npm link mc-core
-</code></pre></li>
-<li><p>Copy the <code>.env.example</code> to <code>.env</code></p>
-<pre><code> cp .env.example .env
-</code></pre></li>
-<li><p>Edit <code>.env</code> and modify Redis and MySQL credentials if necessary</p>
-</li>
-<li><p>Create a <code>mission_control</code> database on your MySQL host</p>
-</li>
-<li><p>Run setup</p>
-<pre><code> mc setup
-</code></pre></li>
-<li><p>Run starting command</p>
-<pre><code> mc start --dev
-</code></pre></li>
-<li><p>View the application: Go to <a href="http://localhost:3000">localhost:3000</a></p>
-</li>
-<li><p>Watch the logs by using pm2 logs command</p>
-</li>
-</ol>
-<pre><code>./node_modules/mc-core/node_modules/.bin/pm2 logs
-</code></pre>
+<h2 id="prs-issues-on-github">PRs &amp; Issues on GitHub</h2>
+<p>All issues for mission control should be opened against <a href="https://github.com/space-race/mc-core">the &quot;core&quot; repository (mc-core)</a> unless they belong to a specific extension.</p>
+<p>PRs on <code>mc-core</code> should be opened against the <code>develop</code> (default) branch.</p>
+<p>Issues are generally organized into Milestones. You can view <a href="/mission-control/docs/milestones.html">a nice layout of the milestones here</a> on the documentation site.</p>
+<h2 id="setting-up-a-development-environment">Setting up a Development Environment</h2>
+<p>To get started developing, check out our <a href="/mission-control/docs/development-environment-setup.html">Development Environment Setup Guide</a>.</p>
+
             <!--<div class="row">-->
                 <!--<div class="col-lg-12">-->
                     <!--<h1>Simple Sidebar</h1>-->

@@ -1,8 +1,18 @@
 ---
 title: Concepts in Mission Control
-order: 4
+order: 6
 ---
 
 # Concepts in Mission Control
 
-**Jobs** &mdash; Example definition
+**Projects** &mdash; Example definition
+
+**Pipeline Configurations** &mdash; Example definition
+
+**Stage Configurations** &mdash; Example definition
+
+**Pipeline Executions** &mdash; Example definition
+
+**Pipeline Execution Logs** &mdash; Example definition
+
+

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Architecture | Mission Control</title>
+    <title>Updating Mission Control | Mission Control</title>
 
     <!-- Bootstrap: See http://getbootstrap.com/css/ -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" integrity="sha384-pdapHxIh7EYuwy6K7iE41uXVxGCXY0sAjBzaElYGJUrzwodck3Lx6IE2lA0rFREo" crossorigin="anonymous">
@@ -45,16 +45,18 @@
             <li class="divider"></li>
             <li class="title">Documentation</li>
             <li><a href="/mission-control/docs/">Overview</a></li>
-            <li><a href="/mission-control/docs/getting-started.html">Getting Started</a></li>
+            <li><a href="/mission-control/docs/installation-and-setup.html">Installation &amp; Setup</a></li>
             <li><a href="/mission-control/docs/use-cases.html">Use Cases</a></li>
-            <li><a href="/mission-control/docs/concepts.html">Concepts in Mission Control</a></li>
             <li><a href="/mission-control/docs/comparison.html">Comparison to Other DevOps Tools</a></li>
+            <li><a href="/mission-control/docs/faq.html">FAQ</a></li>
+            <li><a href="/mission-control/docs/updating-mission-control.html">Updating Mission Control</a></li>
+            <li><a href="/mission-control/docs/concepts.html">Concepts in Mission Control</a></li>
             <li><a href="/mission-control/docs/configuring-job-notifications.html">Configuring Job Notifications</a></li>
             <li class="divider"></li>
             <li class="title">Contributing & Development</li>
             <li><a href="/mission-control/docs/development-overview.html">Development Overview</a></li>
+            <li><a href="/mission-control/docs/development-environment-setup.html">Dev Environment Setup</a></li>
             <li><a href="/mission-control/docs/milestones.html">Milestones</a></li>
-            <li><a href="/mission-control/docs/architecture.html">Architecture</a></li>
             <li><a href="/mission-control/docs/extensions.html">Building an Extension</a></li>
             <li class="divider"></li>
             <li class="title">Additional Resources</li>
@@ -67,7 +69,19 @@
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle"><span class="octicon octicon-three-bars"></span> Menu</a>
-            
+            <h1 id="updating-mission-control">Updating Mission Control</h1>
+<p>Stop Mission Control</p>
+<pre><code>cd /path/to/mission-control
+mc stop
+</code></pre><p>Update Core</p>
+<pre><code>npm update mc-core
+</code></pre><p>Update any extensions you&#39;d like to. Example:</p>
+<pre><code>npm update mc-ext-basics
+</code></pre><p>Re-run Setup Tool and run any migrations available</p>
+<pre><code>mc setup
+</code></pre><p>Start Mission Control again</p>
+<pre><code>mc start
+</code></pre>
             <!--<div class="row">-->
                 <!--<div class="col-lg-12">-->
                     <!--<h1>Simple Sidebar</h1>-->

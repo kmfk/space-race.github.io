@@ -45,16 +45,18 @@
             <li class="divider"></li>
             <li class="title">Documentation</li>
             <li><a href="/mission-control/docs/">Overview</a></li>
-            <li><a href="/mission-control/docs/getting-started.html">Getting Started</a></li>
+            <li><a href="/mission-control/docs/installation-and-setup.html">Installation &amp; Setup</a></li>
             <li><a href="/mission-control/docs/use-cases.html">Use Cases</a></li>
-            <li><a href="/mission-control/docs/concepts.html">Concepts in Mission Control</a></li>
             <li><a href="/mission-control/docs/comparison.html">Comparison to Other DevOps Tools</a></li>
+            <li><a href="/mission-control/docs/faq.html">FAQ</a></li>
+            <li><a href="/mission-control/docs/updating-mission-control.html">Updating Mission Control</a></li>
+            <li><a href="/mission-control/docs/concepts.html">Concepts in Mission Control</a></li>
             <li><a href="/mission-control/docs/configuring-job-notifications.html">Configuring Job Notifications</a></li>
             <li class="divider"></li>
             <li class="title">Contributing & Development</li>
             <li><a href="/mission-control/docs/development-overview.html">Development Overview</a></li>
+            <li><a href="/mission-control/docs/development-environment-setup.html">Dev Environment Setup</a></li>
             <li><a href="/mission-control/docs/milestones.html">Milestones</a></li>
-            <li><a href="/mission-control/docs/architecture.html">Architecture</a></li>
             <li><a href="/mission-control/docs/extensions.html">Building an Extension</a></li>
             <li class="divider"></li>
             <li class="title">Additional Resources</li>
@@ -68,7 +70,14 @@
         <div class="container-fluid">
             <a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle"><span class="octicon octicon-three-bars"></span> Menu</a>
             <h1 id="building-an-extension">Building an Extension</h1>
-<p>Extensions are typically built around a vendor and may include a number of step types, resources, and more that work in concert together.</p>
+<p>Extensions are typically built around a vendor (ex. Slack) and may include a number of stage types, settings, and more that work in together to provide an integration and/or toolset.</p>
+<h2 id="extension-spec-and-requirements">Extension Spec and Requirements</h2>
+<ul>
+<li>Extension Packages must start with <code>mc-ext-</code></li>
+</ul>
+<p>There is partial spec of sorts, and notes on <a href="https://github.com/space-race/mc-core/issues/86">GitHub Issue #86 &quot;New Extension Format Spec&quot;</a></p>
+<h2 id="extension-validator-helper">Extension Validator Helper</h2>
+<p>There is a script, <a href="https://github.com/space-race/mc-extension-validator">mc-extension-validator</a>, to help validate your extension.</p>
 
             <!--<div class="row">-->
                 <!--<div class="col-lg-12">-->
