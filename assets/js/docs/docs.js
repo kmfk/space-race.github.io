@@ -14,7 +14,7 @@ $(function() {
         // https://api.github.com/repos/space-race/mc-core/milestones
         // https://api.github.com/repos/space-race/mc-core/issues?state=open&milestone=1
 
-        $.getJSON('https://api.github.com/repos/' + repo + '/issues?state=open', function(issues) {
+        $.getJSON('https://api.github.com/repos/' + repo + '/issues?state=open&per_page=200', function(issues) {
 
             $.getJSON('https://api.github.com/repos/' + repo + '/milestones', function(milestones) {
                 milestones.forEach(function(ms) {
