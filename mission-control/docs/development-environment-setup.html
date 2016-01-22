@@ -82,6 +82,9 @@
 <li><p>Create a Mission Control project by cloning the <code>mission-control</code> repo.</p>
 <pre><code> git clone https://github.com/space-race/mission-control.git
 </code></pre></li>
+<li><p>Go to the <code>mc-core</code> repository and fork it.</p>
+<p> <a href="https://github.com/space-race/mc-core">https://github.com/space-race/mc-core</a></p>
+</li>
 <li><p>Clone your fork of the <code>mc-core</code> repo</p>
 <pre><code> git clone https://github.com/your-fork/mc-core.git
 </code></pre></li>
@@ -104,15 +107,19 @@
 <pre><code> mc setup
 </code></pre></li>
 <li><p>Run starting command</p>
-<pre><code> mc start --dev
+<pre><code>mc start --dev
 </code></pre></li>
 <li><p>View the application: Go to <a href="http://localhost:3000">localhost:3000</a></p>
 </li>
 <li><p>Watch the logs by using pm2 logs command</p>
+<pre><code>./node_modules/mc-core/node_modules/.bin/pm2 logs
+</code></pre><p>If you have pm2 installed globally, you can just run:</p>
+<pre><code>pm2 logs
+</code></pre></li>
+<li><p>Visit the <a href="/mission-control/docs/development-overview.html">Development Overview</a> to review the contribution guide.</p>
 </li>
 </ol>
-<pre><code>./node_modules/mc-core/node_modules/.bin/pm2 logs
-</code></pre>
+
             <!--<div class="row">-->
                 <!--<div class="col-lg-12">-->
                     <!--<h1>Simple Sidebar</h1>-->

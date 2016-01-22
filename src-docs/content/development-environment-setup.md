@@ -21,53 +21,65 @@ To get started developing, follow the steps below.
     ```
     git clone https://github.com/space-race/mission-control.git
     ```
+    
+2. Go to the `mc-core` repository and fork it.
 
-2. Clone your fork of the `mc-core` repo
+    https://github.com/space-race/mc-core
+
+3. Clone your fork of the `mc-core` repo
 
     ```
     git clone https://github.com/your-fork/mc-core.git
     ```
 
-3. Run `npm link` inside of your forked `mc-core` directory
+4. Run `npm link` inside of your forked `mc-core` directory
 
     ```
     cd mc-core
     npm link
     ```
 
-4. Link your forked core project in your mission control project
+5. Link your forked core project in your mission control project
 
     ```
     cd ../mission-control
     npm link mc-core
     ```
     
-5. Copy the `.env.example` to `.env`
+6. Copy the `.env.example` to `.env`
 
     ```
     cp .env.example .env
     ```
     
-6. Edit `.env` and modify Redis and MySQL credentials if necessary
+7. Edit `.env` and modify Redis and MySQL credentials if necessary
 
-7. Create a `mission_control` database on your MySQL host
+8. Create a `mission_control` database on your MySQL host
 
-8. Run setup
+9. Run setup
 
     ```
     mc setup
     ```
 
-9. Run starting command
+10. Run starting command
 
     ```
     mc start --dev
     ```
     
-10. View the application: Go to [localhost:3000](http://localhost:3000)
+11. View the application: Go to [localhost:3000](http://localhost:3000)
 
-11. Watch the logs by using pm2 logs command
+12. Watch the logs by using pm2 logs command
 
-```
-./node_modules/mc-core/node_modules/.bin/pm2 logs
-```
+    ```
+    ./node_modules/mc-core/node_modules/.bin/pm2 logs
+    ```
+
+    If you have pm2 installed globally, you can just run:
+    
+    ```
+    pm2 logs
+    ```
+
+13. Visit the [Development Overview](/mission-control/docs/development-overview.html) to review the contribution guide.
