@@ -19,3 +19,7 @@ order: 1
 ## Installation
 
 For now, the easy way to set up mission control is on EC2 using our [Provisioning Script](https://github.com/space-race/mc-provision).
+
+## Development Environment
+
+If you are looking to contribute to Mission Control, follow our [Dev Environment Setup Guide](/mission-control/docs/development-environment-setup.html).
