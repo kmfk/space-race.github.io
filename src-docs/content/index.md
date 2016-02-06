@@ -5,9 +5,9 @@ title: Overview
 # Mission Control *(work in progress)*
 
 [![Build Status](https://travis-ci.org/space-race/mc-core.svg)](https://travis-ci.org/space-race/mc-core)
-[![Dependency Status](https://david-dm.org/space-race/mission-control.svg)](https://david-dm.org/space-race/mission-control)
-[![Dev Dependency Status](https://david-dm.org/space-race/mission-control/dev-status.svg)](https://david-dm.org/space-race/mission-control#info=devDependencies)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Dependency Status](https://david-dm.org/space-race/mc-core.svg)](https://david-dm.org/space-race/mc-core)
+[![Dev Dependency Status](https://david-dm.org/space-race/mc-core/dev-status.svg)](https://david-dm.org/space-race/mc-core#info=devDependencies)
+[![Downloads](https://img.shields.io/npm/dt/mc-core.svg)](https://www.npmjs.com/package/mc-core)
 [![Slack Status](https://space-race-slackin.herokuapp.com/badge.svg)](https://space-race-slackin.herokuapp.com/)
 
 ---
