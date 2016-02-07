@@ -1,6 +1,7 @@
 ---
 title: FAQ
-order: 4
+getting_started: true
+order: 5
 ---
 
 # Frequently Asked Questions (FAQ)

@@ -1,5 +1,6 @@
 ---
 title: Concepts in Mission Control
+general: true
 order: 6
 ---
 

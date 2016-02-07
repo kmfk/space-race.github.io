@@ -1,5 +1,6 @@
 ---
 title: Configuring Job Notifications
+general: true
 order: 9
 ---
 

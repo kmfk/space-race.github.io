@@ -1,7 +1,7 @@
 ---
 title: Building an Extension
-dev: true
-order: 3
+extension_development: true 
+order: 1
 ---
 
 # Building an Extension
@@ -17,3 +17,4 @@ There is partial spec of sorts, and notes on [GitHub Issue #86 "New Extension Fo
 ## Extension Validator Helper
 
 There is a script, [mc-extension-validator](https://github.com/space-race/mc-extension-validator), to help validate your extension.
+

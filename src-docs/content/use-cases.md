@@ -1,5 +1,6 @@
 ---
 title: Use Cases
+getting_started: true
 order: 3
 ---
 

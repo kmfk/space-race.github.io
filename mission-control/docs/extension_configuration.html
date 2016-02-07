@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Dev Environment Setup | Mission Control</title>
+    <title>Extension Configuration | Mission Control</title>
 
     <!-- Bootstrap: See http://getbootstrap.com/css/ -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" integrity="sha384-pdapHxIh7EYuwy6K7iE41uXVxGCXY0sAjBzaElYGJUrzwodck3Lx6IE2lA0rFREo" crossorigin="anonymous">
@@ -82,57 +82,41 @@
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle"><span class="octicon octicon-three-bars"></span> Menu</a>
-            <h1 id="development-overview">Development Overview</h1>
-<p>To get started developing, follow the steps below.</p>
-<h2 id="dependencies">Dependencies</h2>
+            <h1 id="building-an-extension">Building an Extension</h1>
+<p>Extensions are typically built around a vendor (ex. Slack) and may include a number of stage types, settings, and more that work in together to provide an integration and/or toolset.</p>
+<h2 id="extension-spec-and-requirements">Extension Spec and Requirements</h2>
 <ul>
-<li>Node 5+</li>
-<li>MySQL 5.6+</li>
-<li>Redis</li>
+<li>Extension Packages must start with <code>mc-ext-</code></li>
 </ul>
-<h2 id="setup">Setup</h2>
-<ol>
-<li><p>Create a Mission Control project by cloning the <code>mission-control</code> repo.</p>
-<pre><code> git clone https://github.com/space-race/mission-control.git
-</code></pre></li>
-<li><p>Go to the <code>mc-core</code> repository and fork it.</p>
-<p> <a href="https://github.com/space-race/mc-core">https://github.com/space-race/mc-core</a></p>
-</li>
-<li><p>Clone your fork of the <code>mc-core</code> repo</p>
-<pre><code> git clone https://github.com/your-fork/mc-core.git
-</code></pre></li>
-<li><p>Run <code>npm link</code> inside of your forked <code>mc-core</code> directory</p>
-<pre><code> cd mc-core
- npm link
-</code></pre></li>
-<li><p>Link your forked core project in your mission control project</p>
-<pre><code> cd ../mission-control
- npm link mc-core
-</code></pre></li>
-<li><p>Copy the <code>.env.example</code> to <code>.env</code></p>
-<pre><code> cp .env.example .env
-</code></pre></li>
-<li><p>Edit <code>.env</code> and modify Redis and MySQL credentials if necessary</p>
-</li>
-<li><p>Create a <code>mission_control</code> database on your MySQL host</p>
-</li>
-<li><p>Run setup</p>
-<pre><code> mc setup
-</code></pre></li>
-<li><p>Run starting command</p>
-<pre><code>mc start --dev
-</code></pre></li>
-<li><p>View the application: Go to <a href="http://localhost:3000">localhost:3000</a></p>
-</li>
-<li><p>Watch the logs by using pm2 logs command</p>
-<pre><code>./node_modules/mc-core/node_modules/.bin/pm2 logs
-</code></pre><p>If you have pm2 installed globally, you can just run:</p>
-<pre><code>pm2 logs
-</code></pre></li>
-<li><p>Visit the <a href="/mission-control/docs/development-overview.html">Development Overview</a> to review the contribution guide.</p>
-</li>
-</ol>
+<p>There is partial spec of sorts, and notes on <a href="https://github.com/space-race/mc-core/issues/86">GitHub Issue #86 &quot;New Extension Format Spec&quot;</a></p>
+<h2 id="extension-registering">Extension Registering</h2>
+<p>Each extension provides an <code>index.js</code> at the top level.</p>
+<p>Example <code>index.js</code></p>
+<pre><code>&#39;use strict&#39;
 
+module.exports = {
+
+  vendor: &#39;mc&#39;,
+  id: &#39;github&#39;,
+  name: &#39;GitHub&#39;,
+  description: &#39;Extension for working with GitHub, including cloning repos, handling webhooks, and the status API.&#39;,
+
+  webhooks: [
+    require(&#39;./src/webhooks/execute-pipeline&#39;)
+  ],
+
+  stages: [
+    require(&#39;./src/stages/clone-repo&#39;)
+  ],
+
+  logs: [],
+
+  accounts: [
+    require(&#39;./src/accounts/github-oauth&#39;)
+  ]
+
+}
+</code></pre>
             <!--<div class="row">-->
                 <!--<div class="col-lg-12">-->
                     <!--<h1>Simple Sidebar</h1>-->

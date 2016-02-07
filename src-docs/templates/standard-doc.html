@@ -43,14 +43,24 @@
         </a>
         <ul class="sidebar-nav">
             <li class="divider"></li>
-            <li class="title">Documentation</li>
+
+            <li class="title">Getting Started</li>
             <li><a href="/mission-control/docs/">Overview</a></li>
             {{#file.data.root.data.children}}
-            {{^data.dev}}
+            {{#data.getting_started}}
             <li><a href="{{data.url}}">{{data.title}}</a></li>
-            {{/data.dev}}
+            {{/data.getting_started}}
             {{/file.data.root.data.children}}
             <li class="divider"></li>
+
+            <li class="title">Documentation</li>
+            {{#file.data.root.data.children}}
+            {{#data.general}}
+            <li><a href="{{data.url}}">{{data.title}}</a></li>
+            {{/data.general}}
+            {{/file.data.root.data.children}}
+            <li class="divider"></li>
+
             <li class="title">Contributing & Development</li>
             {{#file.data.root.data.children}}
             {{#data.dev}}
@@ -58,6 +68,15 @@
             {{/data.dev}}
             {{/file.data.root.data.children}}
             <li class="divider"></li>
+
+            <li class="title">Extension Development</li>
+            {{#file.data.root.data.children}}
+            {{#data.extension_development}}
+            <li><a href="{{data.url}}">{{data.title}}</a></li>
+            {{/data.extension_development}}
+            {{/file.data.root.data.children}}
+            <li class="divider"></li>
+
             <li class="title">Additional Resources</li>
             <li><a href="https://github.com/space-race/mission-control" target="_blank"><span class="octicon octicon-mark-github"></span>Mission Control on GitHub</a></li>
             <li><a href="https://space-race-slackin.herokuapp.com/" target="_blank"><span class="octicon octicon-comment"></span>Mission Control on Slack</a></li>

@@ -1,5 +1,7 @@
 ---
 title: Overview
+getting_started: true
+
 ---
 
 # Mission Control *(work in progress)*

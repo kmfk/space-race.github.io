@@ -1,5 +1,6 @@
 ---
 title: Comparison to Other DevOps Tools
+getting_started: true
 order: 4
 ---
 
@@ -19,4 +20,4 @@ Mission Control is similar to Go CD, but a bit simpler and with a different Stac
 
 ## Terraform (by HashiCorp)
 
-While infrastructure can be deployed using extensions with Mission Control, its goal is to orchestrate other tools, not necessarily replace them.
+While infrastructure can be deployed using extensions with Mission Control, its goal is to orchestrate other tools, not necessarily replace them. Terraform is focused on deploying infrastructure. Mission Control can use terraform within its pipelines and as part of your workflows.

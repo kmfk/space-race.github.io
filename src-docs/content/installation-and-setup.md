@@ -1,5 +1,6 @@
 ---
 title: Installation & Setup
+getting_started: true
 order: 1
 ---
 

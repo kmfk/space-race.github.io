@@ -1,5 +1,6 @@
 ---
 title: Updating Mission Control
+general: true
 order: 5
 ---
 
